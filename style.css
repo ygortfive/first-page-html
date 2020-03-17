@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
+:root {
+  --backgroud-color: #7d53de;
+  --text-color: #fbf5f3;
+  --highlight-color: #bbc9ff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,13 +15,14 @@
 body {
   background-color: #272838;
   font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
 }
 
 header {
-  background-color: #7d53de;
+  background-color: var(--backgroud-color);
   height: 8vh;
   text-align: center;
-  padding: 30px;
+  padding: 30px 30px 50px;
 }
 
 a {
@@ -23,12 +30,12 @@ a {
   font-weight: bold;
   letter-spacing: 3px;
   text-decoration: none;
-  color: #90fcf9;
+  color: var(--highlight-color);
   transition: all 0.5s ease ;
 }
 
 a:hover {
-  color: #111d4a;
+  color: #e9d758 ;
   font-size: 22px;
 }
 
@@ -36,4 +43,61 @@ a + a {
   margin-left: 30px;
 }
 
+main {
+  text-align: center;
+  padding: 32px;
+}
 
+.image-profile img{
+  width: 400px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid var(--highlight-color) ;
+  margin-bottom: 32px;
+}
+
+.title-profile h1 {
+  color: var(--backgroud-color);
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.desc-profile p {
+  margin: 0 auto;
+  width: 350px;
+  padding: 12px;
+  margin-bottom: 24px;
+}
+
+.itens-profile {
+  display: table;
+  background-color: var(--backgroud-color);
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+.list-inline {
+  min-width: 400px;
+  list-style: none;
+}
+
+.list-inline li {
+  display: inline;
+}
+
+.list-inline li + li {
+  margin-left: 10px;
+}
+
+.network-profile img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  transition: all 1s solid;
+}
+
+.network-profile img:hover {
+  border: 3px solid var(--highlight-color);
+}
