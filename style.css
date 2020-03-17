@@ -101,3 +101,94 @@ main {
 .network-profile img:hover {
   border: 3px solid var(--highlight-color);
 }
+
+.main-title h1 {
+  margin-bottom: 32px;
+  color: var(--highlight-color);
+}
+
+.contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 24px;
+}
+
+.content {
+  background-color: #20212e;
+  margin: 0 auto;
+  width: 300px;
+  max-width: 300px;
+  min-height: 200px;
+  padding: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+div.content-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+
+div.content-info p {
+ background-color: var(--backgroud-color);
+ border-radius: 45%;
+ font-size: 14px;
+ padding: 5px 8px;
+ margin-top: 12px;
+}
+
+.modal-overlay {
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.modal {
+  background-color: white;
+  width: 50%;
+  height: 70%;
+  margin: 5vh auto;
+  position: relative;
+  transition: all 0.7s ease;
+}
+
+.modal a + a {
+  margin-right: 25px;
+}
+
+.modal-content iframe {
+ position: absolute;
+ top: 30px;
+ width: 100%;
+ height: 100%;
+}
+
+.close-modal, .maximize-modal {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+  color: black;
+}
+
+
+.close-modal:hover, .maximize-modal:hover {
+  color: var(--backgroud-color);
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.7s ease;
+}
+
+.maximize {
+  width: 90%;
+  height: 90%;
+}
