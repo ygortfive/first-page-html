@@ -14,12 +14,18 @@ for(let content of contents) {
 
 close.addEventListener("click", () => {
   modalOverlay.classList.remove('active')
+  validMaximize()
 })
 
 maximize.addEventListener("click", () => {
-  if (modal.classList.contains('maximize')) {
-    return modal.classList.remove('maximize')
-  }
+  if (validMaximize()) return 
   return modal.classList.add('maximize')
 })
 
+function validMaximize() {
+  if (modal.classList.contains('maximize')) {
+    modal.classList.remove('maximize')
+    return true
+  }
+  return false
+}
